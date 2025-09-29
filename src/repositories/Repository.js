@@ -1,5 +1,3 @@
-//This repository fetches data from the fake store api
-// src/repositories/Repository.js
 const fakeStoreApiUrl = 'https://fakestoreapi.com/products';
 class Repository {
   async findProducts() {

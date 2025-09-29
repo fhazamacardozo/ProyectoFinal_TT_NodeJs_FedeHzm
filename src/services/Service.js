@@ -1,5 +1,3 @@
-// src/services/exampleService.js
-
 import Repository from '../repositories/Repository.js';
 
 class Service {

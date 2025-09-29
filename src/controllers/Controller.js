@@ -1,5 +1,3 @@
-// src/controllers/exampleController.js
-
 import Service from '../services/Service.js';
 
 class Controller {
