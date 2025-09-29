@@ -49,26 +49,26 @@ class Repository {
 
   async deleteProduct(id) {
     try {
-
-      const product = await this.findProductById(id);
-      if (!product) {
-        throw new Error('Product not found');
-      }
-
       const response = await fetch(`${fakeStoreApiUrl}/${id}`, {
         method: 'DELETE',
-      }); 
-      
-      if (!response.ok) {
-        throw new Error('Failed to delete product');
-      }
-
-      return product;
+      });
+        if (response.status === 404) {
+          // Producto no existe
+          throw new Error('Product not found');
+        }
+        if (!response.ok) {
+          throw new Error(`API responded with status ${response.status}`);
+        }
+        const text = await response.text();
+        if (!text) {
+          return null;
+        }
+        const data = JSON.parse(text);
+        return data;
     } catch (error) {
       console.error('Error deleting product:', error);
       throw error;
     }
   }
 }
-
 export default new Repository();

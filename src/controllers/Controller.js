@@ -24,12 +24,12 @@ class Controller {
     }
     async deleteProduct(req, res) {
         const { id } = req.params;
-        try {
-            await Service.deleteProduct(id);
-            res.status(204).send();
-        } catch (error) {
+        const deleted = await Service.deleteProduct(id);
+        if (!deleted) {
             return res.status(404).json({ error: 'Producto no encontrado' });
         }
+        console.log("Deleted Product:",deleted);
+        res.status(204).send();
     }
 }
 

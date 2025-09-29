@@ -20,6 +20,7 @@ La API gestiona productos utilizando la Fake Store API como backend externo. Las
 - `src/config/` - Configuracion del servidor
 
 
+
 ## Cómo correr el proyecto
 1. Clona el repositorio:
 	```bash
@@ -30,11 +31,16 @@ La API gestiona productos utilizando la Fake Store API como backend externo. Las
 	```bash
 	npm install
 	```
-3. Inicia el servidor:
+3. Inicia el servidor en modo desarrollo:
+	```bash
+	npm run dev
+	```
+	El servidor se reiniciará automáticamente al guardar cambios.
+4. Para producción, inicia el servidor normalmente:
 	```bash
 	npm start
 	```
-4. Accede a la API en `http://localhost:3000/api/products`
+5. Accede a la API en `http://localhost:3000/api/products`
 
 ## Notas
 - El proyecto utiliza ES Modules (`type: module` en package.json).
