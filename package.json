@@ -1,0 +1,25 @@
+{
+  "name": "proyectofinal_tt_nodejs_fedehzm",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Proyecto curso TalentoTech de Backend usando NodeJs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fhazamacardozo/ProyectoFinal_TT_NodeJs_FedeHzm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fhazamacardozo/ProyectoFinal_TT_NodeJs_FedeHzm/issues"
+  },
+  "homepage": "https://github.com/fhazamacardozo/ProyectoFinal_TT_NodeJs_FedeHzm#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
