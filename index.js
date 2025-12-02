@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
         <ul>
             <li>GET /api/products - Listar productos</li>
             <li>GET /api/products/:id - Obtener producto por ID</li>
-            <li>POST /api/products - <strong>Requiere autenticación</strong></li>
+            <li>POST /api/products/create - <strong>Requiere autenticación</strong></li>
             <li>DELETE /api/products/:id - <strong>Requiere autenticación</strong></li>
         </ul>
         <h3>Autenticación</h3>
