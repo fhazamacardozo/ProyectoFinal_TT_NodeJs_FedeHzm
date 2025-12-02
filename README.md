@@ -61,4 +61,5 @@ Si el token no está presente o es inválido, la API responderá con un error 40
 
 ## Notas
 - El proyecto utiliza ES Modules (`type: module` en package.json).
-- La API depende de la Fake Store API, por lo que requiere conexión a internet.
+- La API depende de una instancia de Firestore Database, por lo que requiere conexión a internet y las credenciales necesarias en las variables de entorno.
+- Tambien hay que definir la secret key para los token en las variables de entorno.
