@@ -15,13 +15,18 @@ app.get('/', (req, res) => {
     res.send(`
         <h2>API Endpoints</h2>
         <ul>
-        <li>GET /api/products - Listar productos</li>
-        <li>GET /api/products/:id - Obtener producto por ID</li>
-        <li>POST /api/products - Crear producto</li>
-        <li>DELETE /api/products/:id - Eliminar producto</li>
+            <li>GET /api/products - Listar productos</li>
+            <li>GET /api/products/:id - Obtener producto por ID</li>
+            <li>POST /api/products - <strong>Requiere autenticación</strong></li>
+            <li>DELETE /api/products/:id - <strong>Requiere autenticación</strong></li>
         </ul>
+        <h3>Autenticación</h3>
+        <ul>
+            <li>POST /auth/login - Obtener token JWT</li>
+        </ul>
+        <p>Para crear o borrar productos debes estar autenticado. Envía el token JWT en el header <code>Authorization: Bearer &lt;tu_token&gt;</code> en tus peticiones protegidas.</p>
     `);
-    });
+});
 app.use((req, res, next) => {
     res.status(404).json({ error: 'Recurso no encontrado o ruta inválida' });
 });
