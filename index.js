@@ -1,6 +1,7 @@
 import express from 'express';
 import config from './src/config/Config.js';
 import ProductRoutes from './src/routes/ProductRoutes.js';
+import AuthRoutes from './src/routes/AuthRoutes.js';
 import cors from 'cors';
 
 const app = express();
@@ -8,6 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.use('/auth', AuthRoutes);
 app.use('/api', ProductRoutes);
 app.get('/', (req, res) => {
     res.send(`
